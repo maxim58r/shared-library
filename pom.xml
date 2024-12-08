@@ -9,7 +9,7 @@
 
     <properties>
         <java.version>21</java.version>
-        <lombok.version>1.18.36</lombok.version>
+        <lombok.version>1.18.34</lombok.version>
         <jackson.version>2.15.2</jackson.version>
         <reactor.version>3.5.7</reactor.version>
         <junit.version>5.10.0</junit.version>
@@ -64,9 +64,9 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
-                    <compilerArgs>
-                        <arg>--enable-preview</arg> <!-- если используется GraalVM -->
-                    </compilerArgs>
+<!--                    <compilerArgs>-->
+<!--                        <arg>&#45;&#45;enable-preview</arg> &lt;!&ndash; если используется GraalVM &ndash;&gt;-->
+<!--                    </compilerArgs>-->
                 </configuration>
             </plugin>
         </plugins>
