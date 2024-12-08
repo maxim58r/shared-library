@@ -9,32 +9,47 @@
 
     <properties>
         <java.version>21</java.version>
+        <lombok.version>1.18.36</lombok.version>
+        <jackson.version>2.15.2</jackson.version>
+        <reactor.version>3.5.7</reactor.version>
+        <junit.version>5.10.0</junit.version>
+        <spring-boot-starter.version>3.4.0</spring-boot-starter.version>
     </properties>
 
     <dependencies>
+        <!-- Spring Boot Starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${spring-boot-starter.version}</version>
+        </dependency>
         <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
 
-        <!-- Jackson для сериализации DTO -->
+        <!-- Jackson Databind -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
         </dependency>
 
         <!-- Reactor Core -->
         <dependency>
             <groupId>io.projectreactor</groupId>
             <artifactId>reactor-core</artifactId>
+            <version>${reactor.version}</version>
         </dependency>
 
-        <!-- JUnit для тестов -->
+        <!-- JUnit for Tests -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -45,10 +60,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.13.0</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                    <compilerArgs>
+                        <arg>--enable-preview</arg> <!-- если используется GraalVM -->
+                    </compilerArgs>
                 </configuration>
             </plugin>
         </plugins>
