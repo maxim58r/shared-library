@@ -1,6 +1,10 @@
 package com.chatter.shared.constants;
 
+import lombok.AccessLevel;
+import lombok.experimental.FieldDefaults;
+
+@FieldDefaults(makeFinal = true, level = AccessLevel.PUBLIC)
 public class AppConstants {
-    public static final String SUCCESS = "SUCCESS";
-    public static final String ERROR = "ERROR";
+    static String SUCCESS = "SUCCESS";
+    static String ERROR = "ERROR";
 }
