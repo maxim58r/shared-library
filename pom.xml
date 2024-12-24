@@ -6,7 +6,7 @@
     <!-- Идентификатор артефакта -->
     <groupId>com.chatter</groupId>
     <artifactId>shared-library</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 <!--    <version>1.0.1-SNAPSHOT</version>-->
     <packaging>jar</packaging>
 
@@ -49,12 +49,25 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
+        <!-- Spring Security -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Starter Web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+
         <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
             <scope>provided</scope>
+            <optional>true</optional>
         </dependency>
 
         <!-- Jackson Databind -->
